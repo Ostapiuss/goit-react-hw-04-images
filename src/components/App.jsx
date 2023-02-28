@@ -38,7 +38,7 @@ export const App = () => {
         setIsUpdated(true)
       });
     }
-  }, [page]);
+  }, [page, query, images]);
 
   return (
     <div className="app">

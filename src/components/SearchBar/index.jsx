@@ -25,7 +25,7 @@ const SearchBar = ({ getSearchData }) => {
   return (
     <header className="Searchbar">
       <form className="SearchForm" onSubmit={onSubmit}>
-        <button type="button" className="SearchForm-button" onClick={onSubmit}>
+        <button type="submit" className="SearchForm-button">
           <SearchIcon className="SearchForm-icon" />
         </button>
         <input

@@ -7,7 +7,9 @@ import './style.scss';
 const SearchBar = ({ getSearchData }) => {
   const [searchText, setSearchText] = useState(null);
 
-  const onSubmit = () => {
+  const onSubmit = (event) => {
+    event.preventDefault();
+
     if (searchText) {
       getSearchData(searchText);
     }
@@ -19,9 +21,10 @@ const SearchBar = ({ getSearchData }) => {
     setSearchText(value);
   }
 
+
   return (
     <header className="Searchbar">
-      <form className="SearchForm">
+      <form className="SearchForm" onSubmit={onSubmit}>
         <button type="button" className="SearchForm-button" onClick={onSubmit}>
           <SearchIcon className="SearchForm-icon" />
         </button>

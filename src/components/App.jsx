@@ -27,7 +27,7 @@ export const App = () => {
       setImages(res.hits);
       setIsUpdated(true)
     });
-    setQuery(`${QUERY}&category=${text}`);
+    setQuery(`${QUERY}&q=${text}`);
   }
 
   useEffect(() => {
